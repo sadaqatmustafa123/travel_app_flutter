@@ -44,6 +44,36 @@ class HomePage extends StatelessWidget {
           )
         ],
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        items: const [
+          BottomNavigationBarItem(
+              icon: Icon(
+                Ionicons.home_outline,
+              ),
+              label: "Home"),
+          BottomNavigationBarItem(
+            icon: Icon(Ionicons.bookmark_outline),
+            label: "Bookmark",
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Ionicons.ticket_outline,
+              ),
+              label: "Ticket"),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Ionicons.person_outline,
+            ),
+            label: "Profile",
+          )
+        ],
+      ),
+      body: const Center(
+        child: Text(
+          "Home Page",
+        ),
+      ),
     );
   }
 }
