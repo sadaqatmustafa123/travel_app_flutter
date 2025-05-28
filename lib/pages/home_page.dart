@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:travel_app/widgets/custom_icon_widget.dart';
 import 'package:travel_app/widgets/location_card.dart';
+import 'package:travel_app/widgets/tourist_places.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -33,8 +34,6 @@ class HomePage extends StatelessWidget {
               Ionicons.search_outline,
             ),
           ),
-          // test commit
-          // test commit two
           Padding(
             padding: EdgeInsets.only(right: 12.0, left: 8),
             child: CustomIconWidget(
@@ -74,7 +73,18 @@ class HomePage extends StatelessWidget {
       ),
       body: ListView(
         padding: const EdgeInsets.all(08),
-        children: const [LocationCard()],
+        // LOCATION CARD
+        children: const [
+          LocationCard(),
+
+          // TOURIST PLACES
+          SizedBox(
+            height: 6,
+          ),
+          TouristPlaces(),
+        ],
+
+        // TOURIST PLACES
       ),
     );
   }

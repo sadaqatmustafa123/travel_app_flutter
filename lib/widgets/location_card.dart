@@ -20,6 +20,7 @@ class LocationCard extends StatelessWidget {
             width: width * 0.25,
           ),
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 "Your Location",
@@ -32,8 +33,8 @@ class LocationCard extends StatelessWidget {
               ),
               Text(
                 "Karachi, Pakistan",
-                style: Theme.of(context).textTheme.labelMedium!.copyWith(
-                      color: Theme.of(context).primaryColor,
+                style: Theme.of(context).textTheme.labelLarge!.copyWith(
+                      color: Colors.black,
                     ),
               ),
               // test commit
