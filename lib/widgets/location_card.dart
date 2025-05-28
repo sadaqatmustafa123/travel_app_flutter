@@ -17,13 +17,22 @@ class LocationCard extends StatelessWidget {
             width: width * 0.299,
           ),
           SizedBox(
-            width: width * 0.10,
+            width: width * 0.25,
           ),
           Column(
             children: [
               Text(
                 "Your Location",
                 style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                      color: Theme.of(context).primaryColor,
+                    ),
+              ),
+              SizedBox(
+                height: height * 0.0010,
+              ),
+              Text(
+                "Karachi, Pakistan",
+                style: Theme.of(context).textTheme.labelMedium!.copyWith(
                       color: Theme.of(context).primaryColor,
                     ),
               ),
