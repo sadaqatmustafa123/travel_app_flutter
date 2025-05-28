@@ -27,6 +27,7 @@ class LocationCard extends StatelessWidget {
                       color: Theme.of(context).primaryColor,
                     ),
               ),
+              // test commit
             ],
           )
         ],
