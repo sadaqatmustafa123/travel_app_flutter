@@ -32,6 +32,7 @@ class HomePage extends StatelessWidget {
               Ionicons.search_outline,
             ),
           ),
+          // test commit
           Padding(
             padding: EdgeInsets.only(right: 12.0, left: 8),
             child: CustomIconWidget(
