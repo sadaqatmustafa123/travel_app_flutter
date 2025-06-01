@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+// respomsive class for handling app sizes across all devices
+
 class AppResponsive {
   static double screenWidth(BuildContext context) =>
       MediaQuery.of(context).size.width;
