@@ -38,6 +38,24 @@ class RecommendedPlaces extends StatelessWidget {
                         height: 150,
                       ),
                     ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          "Sydney, Australia",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
+                          ),
+                        ),
+                        Icon(
+                          Icons.star,
+                          color: Colors.yellow.shade600,
+                        )
+                      ],
+                    )
                   ],
                 ),
               ),
