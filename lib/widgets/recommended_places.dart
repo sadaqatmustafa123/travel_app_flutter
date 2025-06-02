@@ -21,11 +21,24 @@ class RecommendedPlaces extends StatelessWidget {
             child: InkWell(
               borderRadius: BorderRadius.circular(12),
               onTap: () {},
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(12),
-                child: Image.asset(
-                  "assets/places/place1.jpg",
-                  fit: BoxFit.cover,
+              child: Padding(
+                padding: const EdgeInsets.all(
+                  12,
+                ),
+                child: Column(
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(
+                        12,
+                      ),
+                      child: Image.asset(
+                        "assets/places/place1.jpg",
+                        fit: BoxFit.fill,
+                        width: double.maxFinite,
+                        height: 150,
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -33,7 +46,7 @@ class RecommendedPlaces extends StatelessWidget {
         ),
         separatorBuilder: (context, index) => const Padding(
           padding: EdgeInsets.only(
-            right: 10,
+            right: 05,
           ),
         ),
         itemCount: 5,
