@@ -12,19 +12,25 @@ class TouristPlaces extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
           return Chip(
+            backgroundColor: Colors.white,
+            elevation: 0.4,
             avatar: CircleAvatar(
               backgroundImage: AssetImage(
                 touristPlaces[index].image,
               ),
             ),
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+                side: const BorderSide(
+                  color: Colors.white,
+                )),
             label: Text(touristPlaces[index].name),
           );
         },
         separatorBuilder: (context, index) {
           return const Padding(padding: EdgeInsets.all(4));
         },
+        physics: const BouncingScrollPhysics(),
         itemCount: touristPlaces.length,
       ),
     );
