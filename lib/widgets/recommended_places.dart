@@ -50,9 +50,17 @@ class RecommendedPlaces extends StatelessWidget {
                             fontSize: 15,
                           ),
                         ),
+                        Spacer(),
                         Icon(
                           Icons.star,
                           color: Colors.yellow.shade600,
+                        ),
+                        Text(
+                          "4.4",
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600,
+                          ),
                         )
                       ],
                     )
