@@ -9,9 +9,20 @@ class RecommendedPlaces extends StatelessWidget {
       height: 220,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
-        itemBuilder: (context, index) => const SizedBox(
+        itemBuilder: (context, index) => SizedBox(
           width: 235,
-          child: Card(),
+          child: Card(
+            elevation: 0.4,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+                side: const BorderSide(
+                  color: Colors.white,
+                )),
+            child: InkWell(
+              borderRadius: BorderRadius.circular(12),
+              onTap: () {},
+            ),
+          ),
         ),
         separatorBuilder: (context, index) => const Padding(
           padding: EdgeInsets.only(
