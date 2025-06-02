@@ -43,14 +43,14 @@ class RecommendedPlaces extends StatelessWidget {
                     ),
                     Row(
                       children: [
-                        Text(
+                        const Text(
                           "Sydney, Australia",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 15,
                           ),
                         ),
-                        Spacer(),
+                        const Spacer(),
                         Icon(
                           Icons.star,
                           color: Colors.yellow.shade600,
