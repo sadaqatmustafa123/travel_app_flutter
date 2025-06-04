@@ -54,14 +54,14 @@ class PlacesNearYou extends StatelessWidget {
                             "Some city name",
                             textAlign: TextAlign.start,
                           ),
-                          Spacer(),
+                          const Spacer(),
                           Row(
                             children: [
-                              Icon(
+                              const Icon(
                                 size: 16,
                                 Ionicons.map_outline,
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 08,
                               ),
                               Text(
@@ -69,10 +69,30 @@ class PlacesNearYou extends StatelessWidget {
                                 style: TextStyle(
                                   color: Colors.grey.shade700,
                                 ),
-                              )
+                              ),
+                              Icon(
+                                size: 18,
+                                Ionicons.location_outline,
+                                color: Theme.of(context).primaryColor,
+                              ),
+                              Text("City")
                             ],
                           ),
                           Spacer(),
+                          Row(
+                            children: [
+                              Icon(
+                                Ionicons.star,
+                                size: 18,
+                                color: Colors.yellow.shade600,
+                              ),
+                              Text("4.4"),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 20.0),
+                                child: Text("\$22"),
+                              )
+                            ],
+                          )
                         ],
                       )
                     ],

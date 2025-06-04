@@ -124,7 +124,7 @@ class HomePage extends StatelessWidget {
             ],
           ),
           // Places near you
-          const PlacesNearYou(),
+          PlacesNearYou(),
         ],
       ),
     );
