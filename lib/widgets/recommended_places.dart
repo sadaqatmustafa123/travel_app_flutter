@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
+import 'package:travel_app/app_responsive.dart';
 
 class RecommendedPlaces extends StatelessWidget {
   const RecommendedPlaces({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final height = AppResponsive.screenHeight(context);
+    final width = AppResponsive.screenWidth(context);
     return SizedBox(
       height: 238,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) => SizedBox(
-          width: 235,
+          width: width * 0.59,
           child: Card(
             elevation: 0.4,
             shape: RoundedRectangleBorder(
@@ -45,7 +48,7 @@ class RecommendedPlaces extends StatelessWidget {
                     Row(
                       children: [
                         const Text(
-                          "Sydney, Australia",
+                          "Sydney",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 15,
@@ -65,12 +68,19 @@ class RecommendedPlaces extends StatelessWidget {
                         )
                       ],
                     ),
+                    const SizedBox(
+                      height: 05,
+                    ),
                     Row(
                       children: [
                         Icon(
                           Ionicons.location,
                           color: Theme.of(context).primaryColor,
                           size: 16,
+                        ),
+                        Text(
+                          "Australia",
+                          style: Theme.of(context).textTheme.labelLarge,
                         )
                       ],
                     )
