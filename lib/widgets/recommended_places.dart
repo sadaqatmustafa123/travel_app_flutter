@@ -60,13 +60,13 @@ class RecommendedPlaces extends StatelessWidget {
                           Icons.star,
                           color: Colors.yellow.shade600,
                         ),
-                        const Text(
-                          "4.4",
-                          style: TextStyle(
+                        Text(
+                          recommendedPlaces[index].rating.toString(),
+                          style: const TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w600,
                           ),
-                        )
+                        ),
                       ],
                     ),
                     const SizedBox(
