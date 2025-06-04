@@ -80,7 +80,7 @@ class RecommendedPlaces extends StatelessWidget {
                           size: 16,
                         ),
                         Text(
-                          "Australia",
+                          recommendedPlaces[index].countryName,
                           style: Theme.of(context).textTheme.labelLarge,
                         )
                       ],
