@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:travel_app/widgets/custom_icon_widget.dart';
 import 'package:travel_app/widgets/location_card.dart';
+import 'package:travel_app/widgets/places_near_you.dart';
 import 'package:travel_app/widgets/recommended_places.dart';
 import 'package:travel_app/widgets/tourist_places.dart';
 
@@ -73,6 +74,7 @@ class HomePage extends StatelessWidget {
         ],
       ),
       body: ListView(
+        physics: const BouncingScrollPhysics(),
         padding: const EdgeInsets.all(08),
         // LOCATION CARD
         children: [
@@ -103,6 +105,26 @@ class HomePage extends StatelessWidget {
             ],
           ),
           const RecommendedPlaces(),
+          const SizedBox(
+            height: 10,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "Places near you",
+                style: Theme.of(context).textTheme.titleLarge,
+              ),
+              TextButton(
+                onPressed: () {},
+                child: const Text(
+                  "View All",
+                ),
+              )
+            ],
+          ),
+          // Places near you
+          const PlacesNearYou(),
         ],
       ),
     );
