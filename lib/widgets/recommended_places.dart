@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ionicons/ionicons.dart';
 
 class RecommendedPlaces extends StatelessWidget {
   const RecommendedPlaces({super.key});
@@ -6,7 +7,7 @@ class RecommendedPlaces extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 220,
+      height: 238,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) => SizedBox(
@@ -61,6 +62,15 @@ class RecommendedPlaces extends StatelessWidget {
                             fontSize: 14,
                             fontWeight: FontWeight.w600,
                           ),
+                        )
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Icon(
+                          Ionicons.location,
+                          color: Theme.of(context).primaryColor,
+                          size: 16,
                         )
                       ],
                     )
