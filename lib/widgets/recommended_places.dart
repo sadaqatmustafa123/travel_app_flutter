@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:travel_app/app_responsive.dart';
+import 'package:travel_app/models/recommended_places_model.dart';
 
 class RecommendedPlaces extends StatelessWidget {
   const RecommendedPlaces({super.key});
@@ -36,7 +37,7 @@ class RecommendedPlaces extends StatelessWidget {
                         12,
                       ),
                       child: Image.asset(
-                        "assets/places/place1.jpg",
+                        recommendedPlaces[index].image,
                         fit: BoxFit.fill,
                         width: double.maxFinite,
                         height: 150,
@@ -47,9 +48,9 @@ class RecommendedPlaces extends StatelessWidget {
                     ),
                     Row(
                       children: [
-                        const Text(
-                          "Sydney",
-                          style: TextStyle(
+                        Text(
+                          recommendedPlaces[index].name,
+                          style: const TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 15,
                           ),
@@ -95,7 +96,7 @@ class RecommendedPlaces extends StatelessWidget {
             right: 05,
           ),
         ),
-        itemCount: 5,
+        itemCount: recommendedPlaces.length,
       ),
     );
   }
