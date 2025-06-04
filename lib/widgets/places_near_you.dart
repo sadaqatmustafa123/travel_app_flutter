@@ -21,6 +21,10 @@ class PlacesNearYou extends StatelessWidget {
                   14,
                 ),
               ),
+              child: InkWell(
+                onTap: () {},
+                borderRadius: BorderRadius.circular(14),
+              ),
             ),
           ),
         );
