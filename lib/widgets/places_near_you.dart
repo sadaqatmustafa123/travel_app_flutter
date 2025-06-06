@@ -77,10 +77,12 @@ class PlacesNearYou extends StatelessWidget {
                                 Ionicons.location_outline,
                                 color: Theme.of(context).primaryColor,
                               ),
-                              Text("City")
+                              Text(
+                                place.city,
+                              )
                             ],
                           ),
-                          Spacer(),
+                          const Spacer(),
                           Row(
                             children: [
                               Icon(
@@ -88,10 +90,22 @@ class PlacesNearYou extends StatelessWidget {
                                 size: 18,
                                 color: Colors.yellow.shade600,
                               ),
-                              Text("4.4"),
+                              const Text("4.4"),
                               Padding(
                                 padding: const EdgeInsets.only(left: 20.0),
-                                child: Text("\$22"),
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      "\$" "${place.ticketPrice}",
+                                    ),
+                                    const Text(
+                                      "/Person",
+                                      style: TextStyle(
+                                        fontSize: 15,
+                                      ),
+                                    )
+                                  ],
+                                ),
                               )
                             ],
                           )
