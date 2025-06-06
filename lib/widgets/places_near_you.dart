@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
+import 'package:travel_app/models/places_near_you_model.dart';
 
 class PlacesNearYou extends StatelessWidget {
   const PlacesNearYou({super.key});
@@ -7,7 +8,8 @@ class PlacesNearYou extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: List.generate(5, (index) {
+      children: List.generate(placesNearYou.length, (index) {
+        final place = placesNearYou[index]; // Shorten reference here
         return Padding(
           padding: const EdgeInsets.only(
             bottom: 10,
@@ -34,7 +36,7 @@ class PlacesNearYou extends StatelessWidget {
                           12,
                         ),
                         child: Image.asset(
-                          "assets/places/place3.jpg",
+                          place.image,
                           fit: BoxFit.cover,
                           width: 130,
                           height: double.maxFinite,
@@ -47,7 +49,7 @@ class PlacesNearYou extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "Sea of Peace",
+                            place.placeName,
                             style: Theme.of(context).textTheme.titleLarge,
                           ),
                           const Text(

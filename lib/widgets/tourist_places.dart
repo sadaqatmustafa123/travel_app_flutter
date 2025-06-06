@@ -11,12 +11,13 @@ class TouristPlaces extends StatelessWidget {
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
+          final places = touristPlaces[index];
           return Chip(
             backgroundColor: Colors.white,
             elevation: 0.4,
             avatar: CircleAvatar(
               backgroundImage: AssetImage(
-                touristPlaces[index].image,
+                places.image,
               ),
             ),
             shape: RoundedRectangleBorder(
@@ -24,14 +25,14 @@ class TouristPlaces extends StatelessWidget {
                 side: const BorderSide(
                   color: Colors.white,
                 )),
-            label: Text(touristPlaces[index].name),
+            label: Text(places.name),
           );
         },
         separatorBuilder: (context, index) {
           return const Padding(padding: EdgeInsets.all(4));
         },
-        physics: const BouncingScrollPhysics(),
         itemCount: touristPlaces.length,
+        physics: const BouncingScrollPhysics(),
       ),
     );
   }
