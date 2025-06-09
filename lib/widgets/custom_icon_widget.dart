@@ -24,7 +24,9 @@ class CustomIconWidget extends StatelessWidget {
         ),
         color: Colors.black54,
         splashRadius: 22,
-        onPressed: () {},
+        onPressed: () {
+          // method implementation later
+        },
         icon: icon,
       ),
     );
