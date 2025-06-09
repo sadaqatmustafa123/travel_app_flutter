@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Travel App',
       theme: ThemeData(
+        // further to add black n white themes
         primarySwatch: Colors.blue,
         textTheme: GoogleFonts.mulishTextTheme(
           Theme.of(context).textTheme,
