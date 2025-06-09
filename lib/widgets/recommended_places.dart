@@ -9,6 +9,7 @@ class RecommendedPlaces extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final width = AppResponsive.screenWidth(context);
+    // class instance for app responsiveness
     return SizedBox(
       height: 238,
       child: ListView.separated(

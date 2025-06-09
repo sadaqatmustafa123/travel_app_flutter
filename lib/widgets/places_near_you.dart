@@ -10,6 +10,7 @@ class PlacesNearYou extends StatelessWidget {
     return Column(
       children: List.generate(placesNearYou.length, (index) {
         final place = placesNearYou[index]; // Shorten reference here
+        // help in putting model values
         return Padding(
           padding: const EdgeInsets.only(
             bottom: 10,
