@@ -38,6 +38,7 @@ dependencies:
   google_fonts: 
   ionicons: 
   ionicons_named: ^1.3.2+6
+  http: ^1.4.0
 
 dev_dependencies:
   flutter_test:
