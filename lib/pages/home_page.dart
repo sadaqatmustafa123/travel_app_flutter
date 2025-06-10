@@ -1,13 +1,36 @@
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
+import 'package:travel_app/data/users/models/user_model.dart';
+import 'package:travel_app/services/api_service.dart';
 import 'package:travel_app/widgets/custom_icon_widget.dart';
 import 'package:travel_app/widgets/location_card.dart';
 import 'package:travel_app/widgets/places_near_you.dart';
 import 'package:travel_app/widgets/recommended_places.dart';
 import 'package:travel_app/widgets/tourist_places.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  UserModel? _user;
+  @override
+  void initState() {
+    _loadUser();
+    super.initState();
+  }
+
+  void _loadUser() async {
+    UserModel? fetchedUser = await ApiService().getSingleUser();
+    if (fetchedUser != null) {
+      setState(() {
+        _user = fetchedUser;
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +48,7 @@ class HomePage extends StatelessWidget {
               "Good Morning",
             ),
             Text(
-              "Sadaqat Mustafa",
+              _user?.name ?? "Loading...",
               style: Theme.of(context).textTheme.titleSmall,
             )
           ],
